@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  app:
+    env_file: 
+      - variables.env
+    container_name: newsfeed
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    
